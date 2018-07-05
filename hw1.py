@@ -1,8 +1,12 @@
-# Author: A
-# 
 # August 2013 High Temps for Knoxville,TN
 # Hwk 1 for COSC 370
 #
+'''
+Homework 1: Using Matplotlib to Graph Temperature Data
+Author: Aiden Rutter
+netid: arutter1
+Description: 
+'''
 from numpy import arange
 import matplotlib.pyplot as plt
 xData = arange(1,32)    # Ranges for x and y axes must match
@@ -12,6 +16,13 @@ avg = [86.]  # First value for montly avg high temp is just Day 1 temp
 
 ## 1) CALCULATE A RUNNING MONTHLY AVERAGE AND PRINT IT OUT IN A TABLE
 ##    IT DOES NOT MATTER HOW THE TABLE IS FORMATTED
+tSum = 0.0
+avg = []
+
+for i, t in enumerate(tData):
+    tSum += t
+    avg.append(tSum / (i+1))
+    print('|','%.2d' % (i+1), '|', '%.2f' % avg[i], '|')
 
 ## 2) CREATE A GRAPH FOR THE DATA USING MATPLOTLIB
 ##	- PLOT RED POINTS WITH BLUE LINE FOR ORIGINAL DATA
