@@ -34,15 +34,21 @@ for i, t in enumerate(tData):
 ##	- ENABLE GRID DISPLAY
 ##	- LABEL AXES AND SET TITLE
 ##	- USE MATPLOTLIB.PYPLOT.TEXT() TO LABEL THE MONTHLY AVERAGE LINE
+# Labels
 plt.title("High Temperatures for Knoxville, TN - August 2013")
 plt.xlabel("Day")
 plt.ylabel("High Temp")
 plt.text(15.0, 86.0, 'Monthly Avg', color='green')
+# Grid and scale of plot
 plt.grid(linestyle='--')
 plt.ylim((70,95))
 plt.xlim((0,32))
+# Red marks
 plt.plot(xData, tData, 'ro', markeredgecolor='black', ms=5.0, markeredgewidth=0.5)
+# Blue line
 plt.plot(xData, tData, '-b', lw=1.0)
+# Green average line
 plt.plot(xData, avg, 'g--', lw=1.0, dashes=(5,5))
+
 plt.show()
 
