@@ -5,7 +5,8 @@
 Homework 1: Using Matplotlib to Graph Temperature Data
 Author: Aiden Rutter
 netid: arutter1
-Description: 
+Description: Calculates running avg for each day and prints table in a loop.
+Plot is plotted using matplotlib to match example output image provided.
 '''
 from numpy import arange
 import matplotlib.pyplot as plt
@@ -33,6 +34,15 @@ for i, t in enumerate(tData):
 ##	- ENABLE GRID DISPLAY
 ##	- LABEL AXES AND SET TITLE
 ##	- USE MATPLOTLIB.PYPLOT.TEXT() TO LABEL THE MONTHLY AVERAGE LINE
-
+plt.title("High Temperatures for Knoxville, TN - August 2013")
+plt.xlabel("Day")
+plt.ylabel("High Temp")
+plt.text(15.0, 86.0, 'Monthly Avg', color='green')
+plt.grid(linestyle='--')
+plt.ylim((70,95))
+plt.xlim((0,32))
+plt.plot(xData, tData, 'ro', markeredgecolor='black', ms=5.0, markeredgewidth=0.5)
+plt.plot(xData, tData, '-b', lw=1.0)
+plt.plot(xData, avg, 'g--', lw=1.0, dashes=(5,5))
 plt.show()
 
