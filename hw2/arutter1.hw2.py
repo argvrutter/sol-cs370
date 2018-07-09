@@ -8,7 +8,11 @@
 # the LU decomposition and produces a solution vector (see the
 # provided LUdecomp.py module for correct function calls to do that).
 ####################################################################
-
+'''
+Homework 2 CS370 
+Author: Aiden Rutter
+netid: arutter1
+'''
 from numpy import zeros, ones, array, float64, inf
 from numpy import linalg
 from LUdecomp import *
