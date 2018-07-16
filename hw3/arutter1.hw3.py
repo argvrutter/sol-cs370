@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+'''
+Homework 3 CS370
+Author: Aiden Rutter 
+netid: arutter1
+Description: 
+Populate the arrays given data from textbook.
+'''
 #######################################################
 # probs2_2.py
 # 
@@ -19,22 +26,26 @@ from gaussElimin import *
 #
 ######################################################
 
-#k = array(??,float)
-#W = array(??,float)
-#a = zeros((3,3))
-#a[0,0] = ??
-#a[0,1] = ??
-#a[1,0] = ??
-#a[0,2] = ??
-#a[2,0] = ??
-#a[1,1] = ??
-#a[1,2] = ??
-#a[2,1] = ??
-#a[2,2] = ??
-#L = choleski(a)
-#x = choleskiSol(L,W)
-#print("Displacements are (in units of W/k):\n\n",x)
-#print("--------------------------------------------")
+# K = 1, W = 1
+k = array([1,2,1,1,2],float)
+
+W = array([2, 1, 2],float)
+a = zeros((3,3))
+
+a[0,0] = 6
+a[0,1] = -1
+a[1,0] = -1
+a[0,2] = -2
+a[2,0] = -2
+a[1,1] = 2
+a[1,2] = -1
+a[2,1] = -1
+a[2,2] = 3
+
+L = choleski(a)
+x = choleskiSol(L,W)
+print("Displacements are (in units of W/k):\n\n",x)
+print("--------------------------------------------")
 
 ## problem2_2_17
 ######################################################
@@ -54,16 +65,16 @@ from gaussElimin import *
 #
 ######################################################
 
-#R = [5.0, 10.0, 20.0]
-#for r in R:
-   #a = zeros([3,3])
-   #a[0,:] = ??
-   #a[1,:] = ??
-   #a[2,:] = ??
-   #b = array(??)
-   #print("\nR =",r,"ohms")
-   #print("The currents are (in amps):\n",gaussElimin(a,b))
-#print("--------------------------------------------")
+R = [5.0, 10.0, 20.0]
+for r in R:
+  a = zeros([3,3])
+  a[0,:] = [(50. + r), -r, -30.]
+  a[1,:] = [-r, (65.+r), -15.]
+  a[2,:] = [-30., -15., 45.]
+  b = array([0.,0.,120.])
+  print("\nR =",r,"ohms")
+  print("The currents are (in amps):\n",gaussElimin(a,b))
+print("--------------------------------------------")
 
 ## problem2_2_18
 ######################################################
@@ -75,12 +86,12 @@ from gaussElimin import *
 # [-4.18239492 -2.66455194 -2.71213323 -1.20856463]
 ######################################################
 
-#a = zeros([4,4])
-#a[0,:] = ??
-#a[1,:] = ??
-#a[2,:] = ??
-#a[3,:] = ??
-#b = array(??)
-#print("The currents are (in amps):\n",gaussElimin(a,b))
+a = zeros([4,4])
+a[0,:] = [80., -50., -30., 0.]
+a[1,:] = [-50., 100., -10., -25.]
+a[2,:] = [-30., -10., 65., -20.]
+a[3,:] = [0., -25., -20., 100.]
+b = array([-120., 0., 0., 0.])
+print("The currents are (in amps):\n",gaussElimin(a,b))
 
 input("Press return to exit")
