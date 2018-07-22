@@ -16,7 +16,13 @@
 #   90.17857143 92.85714286 124.10714286 128.57142857]
 #
 ########################################################################
-
+'''
+Homework 4: Problem Set 2.3, Number 19
+Author: Aiden Rutter
+netid: arutter1
+Description: Solve heat equation on nine interior mesh points using 
+conjGrad.py script.
+'''
 from numpy import zeros,array,linalg
 from conjGrad import *
 
