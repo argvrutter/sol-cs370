@@ -4,6 +4,13 @@
 #
 # Problem 17 (use log-log scale)
 #
+'''
+Homework 5: Interpolation using Cubic Splines
+Author: Aiden Rutter
+netid: arutter1
+Description: Use cubic splines to derive table entries for drag coefficients
+of spheres, and kinematic viscosities of water.
+'''
 from cubicSpline import *
 from numpy import array,log10
 xData = array([0.2, 2.0, 20.0, 200.0, 2000.0, 20000.0])
