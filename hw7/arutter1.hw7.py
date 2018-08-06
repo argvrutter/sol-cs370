@@ -10,7 +10,8 @@ Author: Aiden Rutter
 netid: arutter1
 Description:
 Solve a 3x3 non-linear system of equations with the Newton-Raphson method to
-determine the smallest R of the trajector and the corresponding angle'''
+determine the smallest R of the trajector and the corresponding angle
+'''
 
 from newtonRaphson2 import *
 from math import sin, pi
